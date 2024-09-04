@@ -519,6 +519,38 @@ export default class Editor extends React.Component<Props, State> {
     return (
       <div style={{ ...styles.container, ...style }}>
         <textarea
+ref={(c) => {
+  this._input = c;
+}}
+style={{ ...styles.editor, ...styles.textarea, ...contentStyle }}
+className={
+  className + (textareaClassName ? ` ${textareaClassName}` : '')
+}
+id={textareaId}
+value={value}
+onChange={this._handleChange}
+onKeyDown={this._handleKeyDown}
+onClick={onClick}
+onKeyUp={onKeyUp}
+onFocus={onFocus}
+onBlur={onBlur}
+disabled={disabled}
+form={form}
+maxLength={maxLength}
+minLength={minLength}
+name={name}
+placeholder={placeholder}
+readOnly={readOnly}
+required={required}
+autoFocus={autoFocus}
+autoCapitalize="off"
+autoComplete="off"
+autoCorrect="off"
+spellCheck={false}
+data-gramm={false}
+/>
+
+        {/* <textarea
           ref={(c) => (this._input = c)}
           style={{ ...styles.editor, ...styles.textarea, ...contentStyle }}
           className={
@@ -546,7 +578,7 @@ export default class Editor extends React.Component<Props, State> {
           autoCorrect="off"
           spellCheck={false}
           data-gramm={false}
-        />
+        /> */}
         <pre
           className={preClassName}
           aria-hidden="true"
