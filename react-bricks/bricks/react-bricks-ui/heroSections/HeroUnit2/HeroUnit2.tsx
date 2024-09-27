@@ -201,14 +201,14 @@ HeroUnit2.schema = {
       itemType: blockNames.Badge,
       itemLabel: 'Badge',
       min: 0,
-      max: 1,
+      max: 5,
     },
     {
       name: 'buttons',
       itemType: blockNames.Button,
       itemLabel: 'Button',
       min: 0,
-      max: 2,
+      max: 5,
     },
   ],
   sideEditProps: [
